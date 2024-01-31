@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 // --- Options ---
-import Options from './Options.jsx';
+import Options from './Options/Options';
 // --- Statistics ---
-import Statistics from './Statistics.jsx';
+import Statistics from './Statistics/Statistics';
 // --- Notification ---
-import Notification from '../Notification/Notification.jsx';  
+import Notification from './Notification/Notification';  
 
 export default class Feedback extends Component {
   state = {

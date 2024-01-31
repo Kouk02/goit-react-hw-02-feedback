@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionWrap, FeedbackWrap, FeedbackTitle } from '../styledComponents/Section.styled';
+import { SectionWrap, FeedbackWrap, FeedbackTitle } from './sectionStyled/Section.styled';
 
 const Section = ({ title, children }) => {
   return (

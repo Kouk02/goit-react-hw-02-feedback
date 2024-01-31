@@ -1,6 +1,6 @@
 import React from 'react';
-import Feedback from './Feedback/Feedback.jsx';
-import Section from './Section/Section.jsx';
+import Feedback from './Feedback/Feedback';
+import Section from './Section/Section';
 
 const App = () => {
   return (
