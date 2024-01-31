@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Options from './Options.jsx';
 // --- Statistics ---
 import Statistics from './Statistics.jsx';
+// --- Notification ---
+import Notification from '../Notification/Notification.jsx';  
 
 export default class Feedback extends Component {
   state = {
@@ -15,7 +17,6 @@ export default class Feedback extends Component {
     this.setState(prevState => ({ [state]: prevState[state] + 1 }));
   };
 
-  
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
@@ -32,13 +33,14 @@ export default class Feedback extends Component {
     const options = Object.keys(this.state);
     const totalFeedbacks = this.countTotalFeedback();
     const positivePercentage = this.countPositiveFeedbackPercentage();
+
     return (
       <>
-        <Options
-          options={options}
-          onLeaveFeedback={this.onLeaveFeedback}
-        ></Options>
-        {totalFeedbacks !== 0 && (
+        <Options options={options} onLeaveFeedback={this.onLeaveFeedback}></Options>
+        
+        {totalFeedbacks === 0 ? (
+          <Notification message="Unfortunately, we don't have any feedback at the moment 😿" />
+        ) : (
           <Statistics
             title="Statistics 📊"
             good={good}
