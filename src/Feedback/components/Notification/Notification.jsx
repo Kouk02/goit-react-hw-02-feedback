@@ -1,5 +1,5 @@
 import React from 'react';
-import { NotilicationText } from '../styledComponents/Notilication.styled';
+import { NotilicationText } from './Notilication.styled';
 
 const Notilication = ({ message }) => {
   return (

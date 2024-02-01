@@ -1,5 +1,5 @@
 import React from 'react';
-import { OptionsWrap, FeedbackBtn } from '../styledComponents/Options.styled';
+import { OptionsWrap, FeedbackBtn } from './Options.styled';
 
 const Options = ({ options, onLeaveFeedback }) => {
   return (

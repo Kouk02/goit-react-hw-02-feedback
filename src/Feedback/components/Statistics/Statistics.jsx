@@ -3,7 +3,7 @@ import {
   StatisticsWrap,
   StatisticsTitle,
   StatisticsList,
-} from '../styledComponents/Statistic.styled';
+} from './Statistic.styled';
 
 const Statistics = ({
   title,
